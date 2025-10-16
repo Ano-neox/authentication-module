@@ -162,44 +162,130 @@ const AuthMain = () => {
 
         <Grid container spacing={3} mb={3}>
           <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" gap={1}>
-                  <IconUser />
-                  <Typography variant="h6">Total Users</Typography>
+            <Card sx={{ 
+              backgroundColor: '#f8f9ff',
+              border: 'none',
+              boxShadow: 'none',
+              borderRadius: 2,
+              p: 1
+            }}>
+              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2, p: '16px !important' }}>
+                <Box sx={{ 
+                  backgroundColor: '#e8eaff',
+                  borderRadius: '8px',
+                  p: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: '40px',
+                  height: '40px'
+                }}>
+                  <Box sx={{ fontSize: '20px', color: '#5a67d8' }}>👥</Box>
                 </Box>
-                <Typography variant="h4" color="primary">{users.length}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" gap={1}>
-                  <IconShield />
-                  <Typography variant="h6">Active Users</Typography>
+                <Box>
+                  <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#1a202c', mb: 0.5 }}>
+                    {users.length}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#718096', fontSize: '14px' }}>
+                    Total Users
+                  </Typography>
                 </Box>
-                <Typography variant="h4" color="success.main">
-                  {users.filter(u => u.status === 'Active').length}
-                </Typography>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6">Total Roles</Typography>
-                <Typography variant="h4" color="info.main">{roles.length}</Typography>
+            <Card sx={{ 
+              backgroundColor: '#f0fff4',
+              border: 'none',
+              boxShadow: 'none',
+              borderRadius: 2,
+              p: 1
+            }}>
+              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2, p: '16px !important' }}>
+                <Box sx={{ 
+                  backgroundColor: '#c6f6d5',
+                  borderRadius: '8px',
+                  p: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: '40px',
+                  height: '40px'
+                }}>
+                  <Box sx={{ fontSize: '20px', color: '#38a169' }}>✅</Box>
+                </Box>
+                <Box>
+                  <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#1a202c', mb: 0.5 }}>
+                    {users.filter(u => u.status === 'Active').length}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#718096', fontSize: '14px' }}>
+                    Active Users
+                  </Typography>
+                </Box>
               </CardContent>
             </Card>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6">Admin Users</Typography>
-                <Typography variant="h4" color="error.main">
-                  {users.filter(u => u.role === 'Admin').length}
-                </Typography>
+            <Card sx={{ 
+              backgroundColor: '#fffbf0',
+              border: 'none',
+              boxShadow: 'none',
+              borderRadius: 2,
+              p: 1
+            }}>
+              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2, p: '16px !important' }}>
+                <Box sx={{ 
+                  backgroundColor: '#fed7aa',
+                  borderRadius: '8px',
+                  p: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: '40px',
+                  height: '40px'
+                }}>
+                  <Box sx={{ fontSize: '20px', color: '#d69e2e' }}>🔒</Box>
+                </Box>
+                <Box>
+                  <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#1a202c', mb: 0.5 }}>
+                    {roles.length}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#718096', fontSize: '14px' }}>
+                    Total Roles
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={3}>
+            <Card sx={{ 
+              backgroundColor: '#fff5f5',
+              border: 'none',
+              boxShadow: 'none',
+              borderRadius: 2,
+              p: 1
+            }}>
+              <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 2, p: '16px !important' }}>
+                <Box sx={{ 
+                  backgroundColor: '#fed7d7',
+                  borderRadius: '8px',
+                  p: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minWidth: '40px',
+                  height: '40px'
+                }}>
+                  <Box sx={{ fontSize: '20px', color: '#e53e3e' }}>🔑</Box>
+                </Box>
+                <Box>
+                  <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#1a202c', mb: 0.5 }}>
+                    {users.filter(u => u.role === 'Admin').length}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#718096', fontSize: '14px' }}>
+                    Admin Users
+                  </Typography>
+                </Box>
               </CardContent>
             </Card>
           </Grid>
